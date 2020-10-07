@@ -59,3 +59,19 @@ console.log(findCharacter)
 //str1.lastIndexOf(str2)
 findCharacter = phrase.lastIndexOf('o')
 console.log(findCharacter)
+
+/*
+    Ejercicio 1:
+    Programa que reciba una cadena de caracteres y
+    regrese el primer carácter que no se repite.
+    Input: aadbbbc
+    Output: d
+*/
+let cadena = 'aadbbbc'
+
+for (let index = 0; index < cadena.length; index++) {
+    if (cadena.indexOf(cadena[index]) == cadena.lastIndexOf(cadena[index])) {
+        console.log(cadena[index])
+        break
+    }
+}
