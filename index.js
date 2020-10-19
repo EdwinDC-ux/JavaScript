@@ -75,3 +75,73 @@ for (let index = 0; index < cadena.length; index++) {
         break
     }
 }
+
+/*
+    2 -> Métodos de string Parte2.
+*/
+
+//str.match(regExp)
+findCharacter = phrase.match(/Hola/)
+console.log('match', findCharacter)
+
+//str.slice(start, endNotIncluded)
+let newPhrase = phrase.slice(7, 12)
+console.log(newPhrase)
+
+//str.substring(start, endNotIncluded)
+newPhrase = phrase.substring(1, 5)
+console.log(newPhrase)
+
+//str.substr(start, length)
+newPhrase = phrase.substr(1, 5)
+console.log(newPhrase)
+
+//str1.startsWidth(str2)
+let startWidth = phrase.startsWith('H')
+console.log(startWidth)
+
+//str1.replace(regExpr, str2)
+newPhrase = phrase.replace(/o/g, 'e')
+console.log(newPhrase)
+
+//str.trim()
+console.log(phrase.length)
+newPhrase = phrase.trim()
+console.log(newPhrase)
+console.log(newPhrase.length)
+
+//str.charAt(num)
+let positionCharacter = phrase.charAt(6)
+console.log(positionCharacter)
+
+//str[]
+positionCharacter = phrase[8]
+console.log(positionCharacter)
+
+//str.charCodeAt(num)
+positionCharacter = phrase.charCodeAt(6)
+console.log(positionCharacter)
+
+//String.fromCharCode(num)
+let character = String.fromCharCode(97)
+console.log(character)
+
+//str1.split(str2)
+let newArray = phrase.split('')
+console.log(newArray)
+
+//str1.includes(str2, num)
+let hasCharacter = phrase.includes('Hola', 9)
+console.log(hasCharacter)
+
+//str1.endsWith(str2)
+hasCharacter = phrase.endsWith('s ')
+console.log(hasCharacter)
+
+//str.repeat(num)
+console.log(phrase.repeat(20))
+
+//num.toString()
+let number = 2
+number = number.toString()
+console.log(typeof (number))
