@@ -189,3 +189,9 @@ for (let index = 0, index2 = 0; index < frase2.length; index++) {
     }
 }
 console.log(fraseResultado)
+
+//Template literal
+let phrase1 = ' hola '
+let name = 'Dana'
+let age = 24
+console.log(`${phrase1} soy ${name} y tengo ${age} años`)
