@@ -77,7 +77,7 @@ for (let index = 0; index < cadena.length; index++) {
 }
 
 /*
-    2 -> Métodos de string Parte2.
+    3 -> Métodos de string Parte2.
 */
 
 //str.match(regExp)
@@ -197,7 +197,7 @@ let age = 24
 console.log(`${phrase1} soy ${name} y tengo ${age} años`)
 
 /*
-    3 -> Métodos de Array
+    4 -> Métodos de Array
         Conjunto de datos, su posición empieza de cero a n, si declaramos un array como const podremos modificar sus elementos únicamnete haciendo uso del id o con el método push, pero no reemplazar el array cpompleto.
 */
 
@@ -285,7 +285,7 @@ array.sort((a, b) => a - b)
 console.log(array)
 
 /*
-    4 -> Funciones
+    5 -> Funciones
 */
 
 //callback function
@@ -316,3 +316,23 @@ const printValue2 = value => {
     console.log(value)
 }
 printValue2('Hola a todos')
+
+/*
+    6 -> Métodos de array parte 2
+*/
+
+//.foreach(callback(nameItem, index){})
+let numberArray = [1, 2, 3, 4, 5]
+numberArray.forEach((number, ind) => console.log(`${number * number} y mi índice es: ${ind}`))
+
+//.map(function) : procesa todo el arreglo y regresa un array
+let numberArrayMap = numberArray.map((number) => number * number)
+console.log(numberArrayMap)
+
+//.filter(function) : filtra el array con la función y regresa otro array
+let numberArrayFilter = numberArrayMap.filter((number) => number >= 10)
+console.log(numberArrayFilter)
+
+//.reduce(function) reduce el array a un sólo dato
+let numberArrayReduce = numberArray.reduce((acum, number) => acum += number, 0)
+console.log(numberArrayReduce)
