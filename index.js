@@ -343,3 +343,14 @@ console.log(numberArrayReduce)
 */
 let promedio = numberArrayMap.reduce((acum, number, ind, arr) => acum += number / arr.length, 0)
 console.log(promedio)
+
+/*
+    Ejercicio 4:
+    Programa que realiza los productos adyacentes y selecciona el mayor
+*/
+
+function productosAdyacentes(inputArr) {
+    return inputArr.reduce((productoMayor, number, index, array) => number * array[index + 1] > productoMayor ? productoMayor = number * array[index + 1] : productoMayor)
+}
+arr = [3, 6, -2, -5, 7, 3]
+console.log(`El producto adyacente más grande es: ${productosAdyacentes(arr)}`)
