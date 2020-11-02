@@ -195,3 +195,91 @@ let phrase1 = ' hola '
 let name = 'Dana'
 let age = 24
 console.log(`${phrase1} soy ${name} y tengo ${age} años`)
+
+/*
+    3 -> Métodos de Array
+        Conjunto de datos, su posición empieza de cero a n, si declaramos un array como const podremos modificar sus elementos únicamnete haciendo uso del id o con el método push, pero no reemplazar el array cpompleto.
+*/
+
+let array = [17, 24, 15, 30, 18, 20]
+let array2 = ["adios"]
+
+//.concat(arr)
+let newArr = array.concat(array2)
+console.log(array)
+console.log(newArr)
+
+//.every(function => true|false) : verifica si todos los elementos pasan una prueba
+let is = array.every(function (age) {
+    return age >= 18
+})
+console.log(is)
+
+//arr.fill(value,[start,end)) : llena los elementos dentro del rango con el valor estático
+array.fill('hi', 1, 4)
+console.log(array)
+
+//.find(function)
+let numeroMayor = array.find((age) => age >= 18)
+console.log(numeroMayor)
+
+//.findIndex(function)
+let position = array.findIndex((age) => age >= 18)
+console.log(position)
+
+//.indexOf(value)
+let item = array.indexOf(20)
+console.log(item)
+
+//.lastIndexOf(value)
+item = array.lastIndexOf('hi')
+console.log(item)
+
+//.join(string)
+array = ['Hola', 'soy', 'Dana']
+let arrayToString = array.join(" ")
+console.log(arrayToString)
+
+//.reverse()
+let numbersArray = [1, 2, 3, 4, 5]
+console.log(numbersArray.reverse())
+
+//.some(function) : verifica si alguno de los elementos cumple con la función y regresa true con uno que cumpla
+array = [12, 2, 52, 1, 2]
+position = array.some(age => age >= 18)
+console.log(position)
+
+//.shift() : Elimina primer elemento
+let deletedItem = array.shift()
+console.log(`Eliminando el primer elemento que es ${deletedItem} y ahora queda${array}`)
+
+//.unshift(value) : agrega un elemento al inicio
+let putItem = array.unshift(33)
+console.log(`Agregando el primer elemento y ahora mi tamaño es ${putItem} y ahora queda ${array}`)
+
+//.push(value)
+numbersArray.push(4)
+console.log(numbersArray)
+
+//.pop()
+deletedItem = array.pop()
+console.log(deletedItem)
+
+//.slice(start,end)
+newArr = array.slice(1, 4)
+console.log(newArr)
+
+//.splice(start,itemsCount,newValue)
+array.splice(2, 1, 20)
+console.log(array)
+
+//.includes(value)
+let hasHola = array.includes('hola')
+console.log(hasHola)
+
+//.sort([function])
+let alphabethArr = ['a', 'f', 'c', 'b', 'e', 'd']
+alphabethArr.sort()
+console.log(alphabethArr)
+array.sort((a, b) => a - b)
+console.log(array)
