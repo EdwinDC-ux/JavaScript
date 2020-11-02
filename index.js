@@ -283,3 +283,36 @@ alphabethArr.sort()
 console.log(alphabethArr)
 array.sort((a, b) => a - b)
 console.log(array)
+
+/*
+    4 -> Funciones
+*/
+
+//callback function
+function sayHello(greet = () => {
+    console.log('hello')
+}) {
+    let hello = true
+    hello ? greet() : null
+}
+sayHello()
+
+//functions
+function suma(num, num2) {
+    return num + num2
+}
+console.log(suma(3, 4))
+
+//arrow function
+const suma1 = (num, num2) => num + num2
+console.log(suma1(3, 4))
+
+//examples
+const printValue = value => console.log(value)
+printValue('Hola a todos')
+
+const printValue2 = value => {
+    value = value.toUpperCase()
+    console.log(value)
+}
+printValue2('Hola a todos')
