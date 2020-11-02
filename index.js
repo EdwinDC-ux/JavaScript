@@ -336,3 +336,10 @@ console.log(numberArrayFilter)
 //.reduce(function) reduce el array a un sólo dato
 let numberArrayReduce = numberArray.reduce((acum, number) => acum += number, 0)
 console.log(numberArrayReduce)
+
+/*
+    Ejercicio 3:
+    Programa que calcule el promedio de la variable numberArrayMap
+*/
+let promedio = numberArrayMap.reduce((acum, number, ind, arr) => acum += number / arr.length, 0)
+console.log(promedio)
