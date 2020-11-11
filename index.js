@@ -354,3 +354,31 @@ function productosAdyacentes(inputArr) {
 }
 arr = [3, 6, -2, -5, 7, 3]
 console.log(`El producto adyacente más grande es: ${productosAdyacentes(arr)}`)
+
+/*
+    7 -> Objetos
+
+    Sintaxis:
+    let|var|const variable = {
+        key:value -> puede ser cualquiert tipo de dato
+    }
+*/
+
+let person = {
+    firstName: 'Edwin',
+    lastName: 'Díaz',
+    age: 24,
+    gender: 'male',
+    hobbies: ['plantas', 'videojuegos', 'viajar']
+}
+//acceder a elementos por medio de key:
+person.lastName = 'Caballero'
+console.log(person)
+console.log(`Mi nombre es ${person.firstName} y me gusta ${person.hobbies[1]}`)
+
+//Spread Operator -> ... sirve para realizar una "copia" de un objeto
+person = {
+    ...person,
+    email: 'edwin@example.com'
+}
+console.log(person)
