@@ -444,3 +444,15 @@ console.log(circleOfNumbers(10, 2))
 console.log(circleOfNumbers(18, 5))
 console.log(circleOfNumbers(10, 5))
 console.log(circleOfNumbers(11, 4))
+
+/*
+    Ejercicio 8:
+    El principal problema es tu timidez: tienes miedo de terminar bloqueando la vista (aunque sea solo por un par de segundos) de todas las personas que se sientan detrás de ti y en tu columna o las columnas de tu izquierda. Para ganar algo de valor, decide calcular el número de esas personas y ver si puede llegar a la salida sin molestar a demasiadas personas.
+    Dado el número total de filas y columnas en el teatro (nRows y nCols, respectivamente), y la fila y columna en la que está sentado, devuelva el número de personas que se sientan estrictamente detrás de usted y en su columna o hacia la izquierda, asumiendo todos los asientos están ocupados.
+*/
+const seatsInTheater = (nCols, nRows, col, row) => (nCols - col + 1) * (nRows - row)
+
+console.log(seatsInTheater(16, 11, 5, 3))
+console.log(seatsInTheater(16, 11, 4, 4))
+console.log(seatsInTheater(16, 11, 11, 8))
+console.log(seatsInTheater(16, 11, 16, 11))
