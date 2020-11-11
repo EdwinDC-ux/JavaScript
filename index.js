@@ -395,3 +395,43 @@ let profesor = {
     apellidoMaterno: 'Pérez',
     gruposAsignados: [23, 35, 1, 3]
 }
+
+/*
+    Ejercicio 6:
+    Programa que obtenga el promedio de calificaciónes de un array de objetos con estudiantes de un grupo.
+*/
+
+const students = [
+    {
+        firstName: 'Naomi',
+        lastName: 'López',
+        age: 24,
+        gender: 'female',
+        grades: [9, 8, 7, 9, 10]
+    }, {
+        firstName: 'Dana',
+        lastName: 'Garcia',
+        age: 24,
+        gender: 'female',
+        grades: [10, 8, 7, 9, 8]
+    }, {
+        firstName: 'Hill',
+        lastName: 'Gil',
+        age: 23,
+        gender: 'female',
+        grades: [9, 9, 8, 7, 6]
+    },
+    {
+        firstName: 'Edwin',
+        lastName: 'Díaz',
+        age: 24,
+        gender: 'male',
+        grades: [8, 10, 9, 8, 6]
+    }
+]
+
+const getAverage = (grades) => grades.reduce((acum, number, ind, arr) => acum += number / arr.length, 0)
+
+const namesAverage = (group) => group.forEach(student => console.log(`${student.firstName} ${student.lastName} tiene un promedio de ${getAverage(student.grades)}`))
+
+namesAverage(students)
