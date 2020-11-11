@@ -348,7 +348,6 @@ console.log(promedio)
     Ejercicio 4:
     Programa que realiza los productos adyacentes y selecciona el mayor
 */
-
 function productosAdyacentes(inputArr) {
     return inputArr.reduce((productoMayor, number, index, array) => number * array[index + 1] > productoMayor ? productoMayor = number * array[index + 1] : productoMayor)
 }
@@ -363,7 +362,6 @@ console.log(`El producto adyacente más grande es: ${productosAdyacentes(arr)}`)
         key:value -> puede ser cualquiert tipo de dato
     }
 */
-
 let person = {
     firstName: 'Edwin',
     lastName: 'Díaz',
@@ -400,7 +398,6 @@ let profesor = {
     Ejercicio 6:
     Programa que obtenga el promedio de calificaciónes de un array de objetos con estudiantes de un grupo.
 */
-
 const students = [
     {
         firstName: 'Naomi',
@@ -435,3 +432,15 @@ const getAverage = (grades) => grades.reduce((acum, number, ind, arr) => acum +=
 const namesAverage = (group) => group.forEach(student => console.log(`${student.firstName} ${student.lastName} tiene un promedio de ${getAverage(student.grades)}`))
 
 namesAverage(students)
+
+/*
+    Ejercicio 7:
+    Considere números enteros del 0 al n - 1 escritos a lo largo del círculo de tal manera que la distancia entre dos números vecinos sea igual (tenga en cuenta que 0 y n - 1 también son vecinos).
+    Dado n y firstNumber, encuentre el número que está escrito en la posición radialmente opuesta a firstNumber
+*/
+const circleOfNumbers = (n, firstNumber) => firstNumber + n / 2 < n ? firstNumber + n / 2 : firstNumber + n / 2 - n
+
+console.log(circleOfNumbers(10, 2))
+console.log(circleOfNumbers(18, 5))
+console.log(circleOfNumbers(10, 5))
+console.log(circleOfNumbers(11, 4))
