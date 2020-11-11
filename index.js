@@ -348,9 +348,111 @@ console.log(promedio)
     Ejercicio 4:
     Programa que realiza los productos adyacentes y selecciona el mayor
 */
-
 function productosAdyacentes(inputArr) {
     return inputArr.reduce((productoMayor, number, index, array) => number * array[index + 1] > productoMayor ? productoMayor = number * array[index + 1] : productoMayor)
 }
 arr = [3, 6, -2, -5, 7, 3]
 console.log(`El producto adyacente más grande es: ${productosAdyacentes(arr)}`)
+
+/*
+    7 -> Objetos
+
+    Sintaxis:
+    let|var|const variable = {
+        key:value -> puede ser cualquiert tipo de dato
+    }
+*/
+let person = {
+    firstName: 'Edwin',
+    lastName: 'Díaz',
+    age: 24,
+    gender: 'male',
+    hobbies: ['plantas', 'videojuegos', 'viajar']
+}
+//acceder a elementos por medio de key:
+person.lastName = 'Caballero'
+console.log(person)
+console.log(`Mi nombre es ${person.firstName} y me gusta ${person.hobbies[1]}`)
+
+//Spread Operator -> ... sirve para realizar una "copia" de un objeto
+person = {
+    ...person,
+    email: 'edwin@example.com'
+}
+console.log(person)
+
+/*
+    Ejercicio 5:
+    Crear un objeto cualquiera con 6 elementos
+*/
+let profesor = {
+    numeroTrabajador: '123456',
+    tituloAcademico: 'Ing',
+    nombre: 'Juan',
+    apellidoPaterno: 'Pérez',
+    apellidoMaterno: 'Pérez',
+    gruposAsignados: [23, 35, 1, 3]
+}
+
+/*
+    Ejercicio 6:
+    Programa que obtenga el promedio de calificaciónes de un array de objetos con estudiantes de un grupo.
+*/
+const students = [
+    {
+        firstName: 'Naomi',
+        lastName: 'López',
+        age: 24,
+        gender: 'female',
+        grades: [9, 8, 7, 9, 10]
+    }, {
+        firstName: 'Dana',
+        lastName: 'Garcia',
+        age: 24,
+        gender: 'female',
+        grades: [10, 8, 7, 9, 8]
+    }, {
+        firstName: 'Hill',
+        lastName: 'Gil',
+        age: 23,
+        gender: 'female',
+        grades: [9, 9, 8, 7, 6]
+    },
+    {
+        firstName: 'Edwin',
+        lastName: 'Díaz',
+        age: 24,
+        gender: 'male',
+        grades: [8, 10, 9, 8, 6]
+    }
+]
+
+const getAverage = (grades) => grades.reduce((acum, number, ind, arr) => acum += number / arr.length, 0)
+
+const namesAverage = (group) => group.forEach(student => console.log(`${student.firstName} ${student.lastName} tiene un promedio de ${getAverage(student.grades)}`))
+
+namesAverage(students)
+
+/*
+    Ejercicio 7:
+    Considere números enteros del 0 al n - 1 escritos a lo largo del círculo de tal manera que la distancia entre dos números vecinos sea igual (tenga en cuenta que 0 y n - 1 también son vecinos).
+    Dado n y firstNumber, encuentre el número que está escrito en la posición radialmente opuesta a firstNumber
+*/
+const circleOfNumbers = (n, firstNumber) => firstNumber + n / 2 < n ? firstNumber + n / 2 : firstNumber + n / 2 - n
+
+console.log(circleOfNumbers(10, 2))
+console.log(circleOfNumbers(18, 5))
+console.log(circleOfNumbers(10, 5))
+console.log(circleOfNumbers(11, 4))
+
+/*
+    Ejercicio 8:
+    El principal problema es tu timidez: tienes miedo de terminar bloqueando la vista (aunque sea solo por un par de segundos) de todas las personas que se sientan detrás de ti y en tu columna o las columnas de tu izquierda. Para ganar algo de valor, decide calcular el número de esas personas y ver si puede llegar a la salida sin molestar a demasiadas personas.
+    Dado el número total de filas y columnas en el teatro (nRows y nCols, respectivamente), y la fila y columna en la que está sentado, devuelva el número de personas que se sientan estrictamente detrás de usted y en su columna o hacia la izquierda, asumiendo todos los asientos están ocupados.
+*/
+const seatsInTheater = (nCols, nRows, col, row) => (nCols - col + 1) * (nRows - row)
+
+console.log(seatsInTheater(16, 11, 5, 3))
+console.log(seatsInTheater(16, 11, 4, 4))
+console.log(seatsInTheater(16, 11, 11, 8))
+console.log(seatsInTheater(16, 11, 16, 11))
