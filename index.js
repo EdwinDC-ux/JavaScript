@@ -382,3 +382,16 @@ person = {
     email: 'edwin@example.com'
 }
 console.log(person)
+
+/*
+    Ejercicio 5:
+    Crear un objeto cualquiera con 6 elementos
+*/
+let profesor = {
+    numeroTrabajador: '123456',
+    tituloAcademico: 'Ing',
+    nombre: 'Juan',
+    apellidoPaterno: 'Pérez',
+    apellidoMaterno: 'Pérez',
+    gruposAsignados: [23, 35, 1, 3]
+}
